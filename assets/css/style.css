@@ -1,0 +1,122 @@
+/* 구글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 메뉴바 고정 */
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    padding: 25px 0;
+}
+
+/* 로고 */
+.navbar .logo {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 750;
+    letter-spacing: 2px;
+}
+
+.navbar ul.nav {
+    margin-right: 15%;
+}
+
+/* 메뉴 리스트 효과 */
+.navbar ul.nav li.active,
+.navbar ul.nav li:hover {
+    background: rgba(255, 255, 2555, 0.5);
+    color: #000;
+    border-radius: 5px;
+}
+
+.navbar ul.nav li a {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.navbar ul.nav li.active a,
+.navbar ul.nav li:hover a {
+    color: #000;
+}
+
+/* 슬라이더 */
+#carouselExampleIndicators {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#carouselExampleIndicators .carousel-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+
+/* 슬라이더 배경 레이어 */
+#carouselExampleIndicators .carousel-inner::before{
+    content: '';
+    position: absolute;
+    background: rgba(0,0,0,0.45);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+/* 슬라이드 이미지 */
+#carouselExampleIndicators .carousel-inner .carousel-item {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url('https://images.pexels.com/photos/10055265/pexels-photo-10055265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(2) {
+    background: url('https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(3) {
+    background: url('https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+/* 슬라이더 텍스트 */
+#carouselExampleIndicators .carousel-inner .carousel-item .info {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    z-index: 1;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item h1 {
+    color: #fff;
+    font-size: 5.5em;
+    font-weight: 750;
+    -webkit-box-reflect:below -45px linear-gradient(to bottom,rgba(0,0,0,0.5),#000);
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item p {
+    color: #ccc;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 50px;
+}
